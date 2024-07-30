@@ -1,12 +1,7 @@
-#!/bin/bash
-
-# Archivo de texto para guardar el historial de comandos
 HISTORIAL="historial.txt"
-
-# Archivo de texto para guardar la información de usuarios
 USUARIOS="usuarios.txt"
 
-# Función para mostrar el menú principal
+
 mostrar_menu_principal() {
   clear
   echo "Menú Principal"
@@ -17,7 +12,7 @@ mostrar_menu_principal() {
   read -p "Ingrese su opción: " opcion
 }
 
-# Función para mostrar el menú de administrador
+
 mostrar_menu_administrador() {
   clear
   echo "Menú de Administrador"
@@ -30,7 +25,7 @@ mostrar_menu_administrador() {
   read -p "Ingrese su opción: " opcion
 }
 
-# Función para mostrar el menú de usuario normal
+
 mostrar_menu_usuario_normal() {
   clear
   echo "Menú de Usuario Normal"
@@ -60,7 +55,7 @@ function ejecutar_comando2 {
   esac
 }
 
-# Función para mostrar el menú de invitado
+
 mostrar_menu_invitado() {
   clear
   echo "Menú de Invitado"
@@ -92,7 +87,7 @@ function ejecutar_comando3 {
   esac
 }
 
-# Función para ejecutar comandos y guardar historial
+
 ejecutar_comando() {
   comando=$1
   echo "$comando" >> $HISTORIAL
@@ -126,7 +121,7 @@ function ejecutar_comando {
   esac
 }
 
-# Función para registrar un nuevo usuario
+
 registrar_usuario() {
   read -p "Ingrese su usuario: " usuario
   read -p "Ingrese su contraseña: " contrasena
@@ -135,7 +130,7 @@ registrar_usuario() {
   echo "Usuario registrado con éxito"
 }
 
-# Función para validar la información de usuario
+
 validar_usuario() {
   usuario=$1
   contrasena=$2
